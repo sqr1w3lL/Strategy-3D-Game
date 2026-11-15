@@ -149,8 +149,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1608444190}
-  - {fileID: 2038411051}
-  - {fileID: 995466844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7283076
@@ -5435,7 +5433,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
-  _camView: {fileID: 2050073749}
   players: []
 --- !u!1001 &334583272
 PrefabInstance:
@@ -6107,6 +6104,10 @@ PrefabInstance:
     - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_Name
       value: Vehicle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7574856985513561399, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14474,6 +14475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vehicle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7574856985513561399, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.07
@@ -18867,7 +18872,6 @@ GameObject:
   - component: {fileID: 995466844}
   - component: {fileID: 995466843}
   - component: {fileID: 995466842}
-  - component: {fileID: 995466841}
   m_Layer: 0
   m_Name: Ocean
   m_TagString: Untagged
@@ -18875,28 +18879,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &995466841
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995466840}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &995466842
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18963,11 +18945,11 @@ Transform:
   m_GameObject: {fileID: 995466840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.67931, y: -0.3, z: 83.62227}
-  m_LocalScale: {x: 70, y: 1, z: 70}
+  m_LocalPosition: {x: -1.8366668, y: 0.0066666603, z: -2.726667}
+  m_LocalScale: {x: 23.333334, y: 0.33333334, z: 23.333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1685997}
+  m_Father: {fileID: 1448278118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1000780623
 PrefabInstance:
@@ -22782,6 +22764,10 @@ PrefabInstance:
     - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_Name
       value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7574856985513561399, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28354,6 +28340,8 @@ Transform:
   - {fileID: 1279932838}
   - {fileID: 1246622620}
   - {fileID: 2023844966}
+  - {fileID: 2038411051}
+  - {fileID: 995466844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1450811692
@@ -30891,12 +30879,13 @@ GameObject:
   - component: {fileID: 1608444189}
   - component: {fileID: 1608444188}
   - component: {fileID: 1608444187}
+  - component: {fileID: 1608444191}
   m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1608444187
 MeshCollider:
@@ -30992,6 +30981,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1685997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608444191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608444186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 44143f4f31e2e004eb6f858ce83c71ab, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1624353622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33813,6 +33834,10 @@ PrefabInstance:
     - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_Name
       value: Vehicle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085460630238156685, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7574856985513561399, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38750,7 +38775,6 @@ GameObject:
   - component: {fileID: 2038411051}
   - component: {fileID: 2038411050}
   - component: {fileID: 2038411049}
-  - component: {fileID: 2038411048}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Untagged
@@ -38758,28 +38782,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &2038411048
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038411047}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2038411049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38846,11 +38848,11 @@ Transform:
   m_GameObject: {fileID: 2038411047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.67931, y: -0.17000002, z: 83.62227}
-  m_LocalScale: {x: 35, y: 1, z: 35}
+  m_LocalPosition: {x: -1.8366668, y: 0.049999993, z: -2.726667}
+  m_LocalScale: {x: 11.666667, y: 0.33333334, z: 11.666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1685997}
+  m_Father: {fileID: 1448278118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2041269748
 PrefabInstance:
