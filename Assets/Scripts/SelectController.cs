@@ -37,7 +37,9 @@ public class SelectController : MonoBehaviour
         if (mouse.leftButton.wasPressedThisFrame)
         {
             foreach (var element in players)
-                element.transform.GetChild(0).gameObject.SetActive(false);
+                if(element != null)
+                    element.transform.GetChild(0).gameObject.SetActive(false);
+            
             players.Clear();
 
             Ray ray = _cam.ScreenPointToRay(mouse.position.ReadValue());

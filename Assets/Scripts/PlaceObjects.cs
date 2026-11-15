@@ -21,8 +21,9 @@ public class PlaceObjects : MonoBehaviour
 
         if (mouse.leftButton.wasPressedThisFrame)
         {
-            gameObject.GetComponent<AutoCarCreate>().enabled = true;
             Destroy(gameObject.GetComponent<PlaceObjects>());
+            if (gameObject.GetComponent<AutoCarCreate>() != null)
+                gameObject.GetComponent<AutoCarCreate>().enabled = true;
         }
 
         if (keyboard.zKey.isPressed)

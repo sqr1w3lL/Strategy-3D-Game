@@ -16,9 +16,9 @@ public class Rain : MonoBehaviour
 
     private void Update()
     {
-        if (_isRaining && directionalLight.intensity > 0.25f)
+        if (_isRaining && directionalLight.intensity > 0.35f)
             LightIntensity(-1);
-        else if (!_isRaining && directionalLight.intensity < 0.5f)
+        else if (!_isRaining && directionalLight.intensity < 1f)
             LightIntensity(1);
     }
 
